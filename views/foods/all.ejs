@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all stories</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />    
+  </head>
+  <body>
+    <%- include('../../partials/navbar.ejs') %>
+    <h1>All chefs</h1>
+  
+    <ul>
+      <% chefs.forEach(chef => { %>
+
+        
+        <li><a href="/users/<%=user._id%>/foods/view/<%=chef.id%>"><%= chef.username%></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

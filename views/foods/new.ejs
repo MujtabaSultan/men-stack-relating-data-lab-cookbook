@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />    <title>create story</title>
+  </head>
+  <body>
+    <%- include('../../partials/navbar.ejs') %>
+    <h1 class="add">Add a New story</h1>
+
+    <form action="/users/<%= user._id %>/foods" method="POST" class="addForm">
+      <label for="name">name:</label>
+      <input type="text" name="name" id="name" required />
+
+      
+    
+      <button type="submit">Add a food</button>
+    </form>
+  </body>
+</html>

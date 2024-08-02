@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pantry</title>
+  </head>
+  <body>
+    <%- include('../../partials/navbar.ejs') %>
+    <h1>Welcome to my Pantry</h1>
+<ul>
+ <%foods.forEach(food =>{%>
+     
+      <li><a href="/users/<%= user._id %>/foods/<%= food.id %>/edit"><%= food.name %></a></li>
+      <form action="/users/<%= user._id %>/foods/<%= food.id %>?_method=DELETE" method="POST"> <button type="submit">delete this item</button></form>
+
+   <% })%>
+
+</ul>
+   
+<a href="/users/<%= user._id %>/foods/new"> add food</a>
+  </body>
+</html>
